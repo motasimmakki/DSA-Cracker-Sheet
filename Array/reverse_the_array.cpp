@@ -1,3 +1,13 @@
+// Sample Input 01:
+// Geeks
+// Sample Output:
+// skeeG
+
+// Sample Input 02:
+// for
+// Sample Output:
+// rof
+
 //Initial Template for C++
 #include<bits/stdc++.h>
 using namespace std;
