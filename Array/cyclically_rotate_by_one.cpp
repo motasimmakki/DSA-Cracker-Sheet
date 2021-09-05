@@ -1,18 +1,26 @@
+// Sample Input 01:
+// Arr: 1, 2, 3, 4, 5
+// Sample Output:
+// 5 1 2 3 4
+
+// Sample Input 02:
+// Arr: 9, 8, 7, 6, 4, 2, 1, 3
+// Sample Output:
+// 3 9 8 7 6 4 2 1
+
 #include<iostream>
 using namespace std;
 
-void swap(int &num1, int &num2){
-    int temp = num1;
-    num1 = num2;
-    num2 = temp;
-}
-
 void rotateByOne(int arr[], int n){
-
+    int last = arr[n-1];
+    for(int i = n-2; i >= 0; i--)
+        arr[i+1] = arr[i];
+    arr[0] = last;
 }
 
 int main(){
-    int arr[] = {};
+    // int arr[] = {1, 2, 3, 4, 5};
+    int arr[] = {9, 8, 7, 6, 4, 2, 1, 3};
     int size = sizeof(arr)/sizeof(arr[0]);
 
     cout<< "\nArray Before Rotating: "<< endl;
