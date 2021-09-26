@@ -37,21 +37,18 @@ Array After Sorting
 
  */
 public class Sort_012 {
-    public static void sort012(int[] arr){
-       
+    public static void sort012(int[] arr){ 
         int i = 0;  // i-1 -->j == 1;
         int j = 0;  // j-1 -->0 == 0
         int k = arr.length-1;  // k+1 --> end == 2
-
       while(i <= k) {
           if (arr[i] == 1) {
               i++;
-
           } else if (arr[i] == 0) {
               swap(arr, i, j);
               i++;
               j++;
-          }
+         }
           else if (arr[i] == 2) {
               swap(arr, i, k);
               k--;
@@ -74,9 +71,12 @@ public class Sort_012 {
     }
     public static void main(String[] args)  {
        int[] arr = {1,0,2,2,1,0,2,1,0,2};
+	    
 	System.out.println("Array Before Sorting");
         print(arr);
+	    
         sort012(arr);
+	    
 	System.out.println("Array After Sorting");
         print(arr);
     }
