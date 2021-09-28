@@ -35,11 +35,9 @@ Array After Sorting
  */
 public class Sort_012 {
     public static void sort012(int[] arr){
-
         int i = 0;  // i-1 -->j == 1;
         int j = 0;  // j-1 -->0 == 0
         int k = arr.length-1;  // k+1 --> end == 2
-
       while(i <= k) {
           if (arr[i] == 1) {
               i++;
