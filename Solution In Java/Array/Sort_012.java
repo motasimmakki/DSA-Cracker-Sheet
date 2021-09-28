@@ -43,8 +43,6 @@ public class Sort_012 {
       while(i <= k) {
           if (arr[i] == 1) {
               i++;
-
-This conversation was marked as resolved by Danish-Belal
           } else if (arr[i] == 0) {
               swap(arr, i, j);
               i++;
@@ -77,6 +75,5 @@ This conversation was marked as resolved by Danish-Belal
         sort012(arr);
 	System.out.println("Array After Sorting");
         print(arr);
-This conversation was marked as resolved by Danish-Belal
     }
 }
