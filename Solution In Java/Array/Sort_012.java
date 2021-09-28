@@ -1,38 +1,40 @@
-
+/*
+Importing java.util Package.
+*/
 import  java.util.*;
 
-// Time Complexity --> O(n).  For n Element
 /*
-Sample Output.
+Time Complexity --> O(n).  For n Element
+
+# Sample Output:
 Array Before Sorting
 1 0 2 2 1 0 2 1 0 2
 Array After Sorting
 0 0 0 1 1 1 2 2 2 2
+
+ 
+# Explanation:
+In function sort012 we initilizw Three valiable i,j and k.
+Assign i and j at index 0 . and k on last index of array.
+Assume Three assumption.
+1. From i-1 till j , store value 1.
+2. From j-1 till 0 index strore value 0.
+3. From K+1  till last index store value 2.
+ 
+# Most Important:
+From index i+1 till K values are unknown and we are soerting these value and placing them on right Position.
+  
+# How Algo is working:
+	Start iterating i from index 0 till k.
+	If value at index i = 1 , then just move to next index.
+	If value is 0 then swap the value with index j .
+	If value is 2 then swap it with index k.
+	When i will reach at index k so,
+	From index 0 to j-1 , all element will be 0.
+	From index j to i-1 , all element will be 1.
+	And index i till end of Array all value will be 2.
  */
 
- /*
- Explanation.
- In function sort012 we initilizw Three valiable i,j and k.
- Assign i and j at index 0 . and k on last index of array.
- Assume Three assumption.
- 1 .  From i-1 till j , store value 1.
- 2 .  From j-1 till 0 index strore value 0.
- 3.  From K+1  till last index store value 2.
- 
-    ***Most Important***
-    from index i+1 till K values are unknown and we are soerting these value and placing them on right Position.
-    
-    
-// How Algo is working.
-        Start iterating i from index 0 till k.
-        if value at index i = 1 , then just move to next index.
-        if value is 0 then swap the value with index j .
-        if value is 2 then swap it with index k.
-        when i will reach at index k so,
-        from index 0 to j-1 , all element will be 0.
-        from index j to i-1 , all element will be 1.
-        and index i till end of Array all value will be 2.
- */
 public class Sort_012 {
     public static void sort012(int[] arr){
         int i = 0;  // i-1 -->j == 1;
@@ -67,11 +69,11 @@ public class Sort_012 {
         System.out.println();
     }
     public static void main(String[] args)  {
-       int[] arr = {1,0,2,2,1,0,2,1,0,2};
+	int[] arr = {1,0,2,2,1,0,2,1,0,2};
 	System.out.println("Array Before Sorting");
-        print(arr);
-        sort012(arr);
+	print(arr);
+	sort012(arr);
 	System.out.println("Array After Sorting");
-        print(arr);
+	print(arr);
     }
 }
